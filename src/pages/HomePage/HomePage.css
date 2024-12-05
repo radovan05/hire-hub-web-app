@@ -1,1 +1,85 @@
-
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.homepage-main-div {
+  min-width: 79vh;
+  min-height: 79vh;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(128, 148, 227);
+  color: white;
+  background-image: url("../../resources/pictures/bgimg.png");
+  background-size: cover;
+}
+.info-right {
+  width: 40%;
+  height: 40%;
+  position: relative;
+  top: 70px;
+  animation: 0.8s ease-out 0s 1 slideInFromLeft;
+}
+.info-right h1 {
+  text-align: center;
+  font-size: 50px;
+}
+.info-right img {
+  position: relative;
+  top: 15px;
+  width: 65px;
+}
+.info-right > p {
+  font-size: 20px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  padding: 5px;
+}
+.info-left {
+  height: 40%;
+  width: 40%;
+  position: relative;
+  top: 420px;
+  animation: 1.4s ease-out 0s 1 slideInFromRight;
+}
+.info-left h1 {
+  text-align: center;
+  font-size: 50px;
+}
+.info-left > p {
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding: 5px;
+  margin-top: 20px;
+}
+.info-left button {
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  margin-top: 30px;
+  position: relative;
+  left: 280px;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 255);
+  color: white;
+  font-size: 16px;
+  box-shadow: 10px 10px 10px rgb(17, 17, 186);
+}
+.info-left button:hover {
+  /* color: rgb(255, 255, 255); */
+  letter-spacing: 2px;
+  transition: 1s;
+  /* font-weight: bold; */
+  cursor: pointer;
+}
