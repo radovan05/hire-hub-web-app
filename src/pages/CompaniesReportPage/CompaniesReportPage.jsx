@@ -45,6 +45,7 @@ console.log(companyReport?.[0].companyName)
         )}
       </div>
     </div>
+    
   );
 };
 
