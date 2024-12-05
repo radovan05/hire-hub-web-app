@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "main";
+}
+.header-main-div {
+  width: 100%;
+  min-height: 100px;
+  background-color: dimgray;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: azure;
+  letter-spacing: 2.5px;
+  /* font-weight: bold; */
+  font-size: x-large;
+}
+.header-main-div > img {
+  width: 65px;
+  cursor: pointer;
+}
+.header-pages {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+}
+.header-pages > p:hover {
+  color: black;
+  letter-spacing: 5px;
+  transition: 1s;
+  font-weight: bold;
+  cursor: pointer;
+}
+.header-selected{ 
+    text-decoration: underline;
+    
+}
+
+
+@font-face {
+  font-family: "main";
+  src: url("../../resources/fonts/PlayfairDisplay-Regular.ttf");
+}

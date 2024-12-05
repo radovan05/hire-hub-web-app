@@ -1,0 +1,11 @@
+.footer-main-div {
+  width: 100%;
+  min-height: 100px;
+  background-color: dimgray;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: azure;
+  letter-spacing: 2.5px;
+  font-size: large;
+}
