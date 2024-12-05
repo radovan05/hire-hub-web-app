@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.allCompaniesPage-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.allCompaniesPage-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: dimgray;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 55%;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 50px;
+}
+
+.allCompaniesPage-container {
+  display: flex;
+  border: 1px solid black;
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.allCompaniesPage-container button {
+  background-color: gray;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
