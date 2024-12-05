@@ -32,11 +32,9 @@
   font-weight: bold;
   cursor: pointer;
 }
-.header-selected{ 
-    text-decoration: underline;
-    
+.header-selected {
+  text-decoration: underline;
 }
-
 
 @font-face {
   font-family: "main";
