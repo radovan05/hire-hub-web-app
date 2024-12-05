@@ -2,8 +2,11 @@
     -webkit-text-security: disc;
     text-security: disc;
 }
-
+*{
+    user-select: none;
+}
 .login-body{
+    z-index: 100;
     position: fixed;
     top:0;
     width: 100%;
