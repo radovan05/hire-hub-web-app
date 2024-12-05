@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "./AllCompaniesPage.css";
-import { useNavigate, Link } from "react-router";
+import { useNavigate } from "react-router";
 
 const URL = "http://localhost:3333/api/companies";
 
@@ -22,7 +22,7 @@ const AllCompaniesPage = () => {
           return (
             <div key={i} className="allCompaniesPage-container" onClick={() => {
               
-                navigate(`/reports?=${company.id}`)                
+                navigate(`/reports/${company.id}`)                
             }}>
               <div>
                 <h4>{company.name}</h4>
