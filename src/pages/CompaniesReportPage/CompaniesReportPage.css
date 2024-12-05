@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.companiesReport-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 79vh;
+}
+.companiesReport-main h1{
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.companiesReport-wrapper{
+    border: 1px solid gray;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: auto;
+    width: 35%;
+    
+
+}
+.companiesReport-container{
+    border: 1px solid gray;
+    padding: 10px;
+    font-size: 20px;
+}
+

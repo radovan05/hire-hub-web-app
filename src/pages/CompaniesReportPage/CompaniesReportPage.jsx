@@ -30,7 +30,9 @@ console.log(companyReport?.[0].companyName)
         {companyReport.length > 0 ? (
 
           companyReport.map((report) => (
-            <div key={report.id} className='companiesReport-container'>
+            <div key={report.id} className='companiesReport-container' onClick={() => {
+              
+            }}>
               <p>Name: {report.candidateName}</p>
               <p>Status: {report.status}</p>
               <p>Phase: {report.phase}</p>
