@@ -33,6 +33,7 @@
   padding: 10px;
   font-size: 20px;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .allCompaniesPage-container button {
