@@ -9,6 +9,7 @@ const CompaniesReportPage = () => {
   const { id } = useParams();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalData,setModalData] = useState('');
+  
 
   const REPORTS_URL = `http://localhost:3333/api/reports?companyId=${id}`;
 
@@ -43,7 +44,6 @@ console.log(companyReport?.[0].companyName)
               setModalData(report)
             }}>
               <p>Name: {report.candidateName}</p>
-              <p>Status: {report.status}</p>
               <p>Phase: {report.phase}</p>
               <p>
                 Interview Date:{" "}
