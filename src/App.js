@@ -14,7 +14,6 @@ function App() {
     localStorage.setItem('user',JSON.stringify(user))
   }
   
-
   if(localStorage.getItem("user")!==undefined&& user===undefined){ 
     setUser(JSON.parse(localStorage.getItem('user')));
   }

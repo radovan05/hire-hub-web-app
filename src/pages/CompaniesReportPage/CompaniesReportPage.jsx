@@ -37,9 +37,9 @@ console.log(companyReport?.[0].companyName)
       <div className="companiesReport-wrapper">
         {companyReport.length > 0 ? (
 
-          companyReport.map((report) => (
+          companyReport.map((report,i) => (
             
-            <div key={report.id} className='companiesReport-container' onClick={()=>{
+            <div key={i} className='companiesReport-container' onClick={()=>{
               toggleModalOpen(); 
               setModalData(report)
             }}>
