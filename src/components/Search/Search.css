@@ -1,0 +1,9 @@
+.search-div{ 
+    width: 55%;
+    display: flex;
+    justify-content: end;
+}
+.search-input{
+    margin-right: 15px;
+    border:2px solid dimgray;
+}
