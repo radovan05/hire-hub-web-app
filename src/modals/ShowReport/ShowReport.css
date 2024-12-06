@@ -36,6 +36,11 @@
 .report-data {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   width: 100%;
+  
+}
+
+.report-data p {
+  font-size: 24px;
 }
