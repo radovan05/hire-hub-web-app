@@ -17,6 +17,7 @@
   padding: 50px;
   display: flex;
   justify-content: space-between;
+  border-radius: 20px;
 }
 
 .close-btn {

@@ -11,7 +11,7 @@ const ShowReport = ({ toggleModalOpen }) => {
           <p>dfg</p>
         </div>
         <div>
-          <button className="close-btn">X</button>
+          <button className="close-btn" onClick={toggleModalOpen}>X</button>
         </div>
       </div>
     </div>
