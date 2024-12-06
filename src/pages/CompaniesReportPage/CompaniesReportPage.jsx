@@ -8,6 +8,7 @@ const CompaniesReportPage = () => {
   const [reports, setReports] = useState([]);
   const { id } = useParams();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalData,setModalData] = useState('');
 
   const REPORTS_URL = `http://localhost:3333/api/reports?companyId=${id}`;
 
@@ -36,7 +37,11 @@ console.log(companyReport?.[0].companyName)
         {companyReport.length > 0 ? (
 
           companyReport.map((report) => (
-            <div key={report.id} className='companiesReport-container' onClick={toggleModalOpen}>
+            
+            <div key={report.id} className='companiesReport-container' onClick={()=>{
+              toggleModalOpen(); 
+              setModalData(report)
+            }}>
               <p>Name: {report.candidateName}</p>
               <p>Status: {report.status}</p>
               <p>Phase: {report.phase}</p>
@@ -50,7 +55,7 @@ console.log(companyReport?.[0].companyName)
           <p>not found</p>
         )}
       </div>
-      {isModalOpen && <ShowReport  toggleModalOpen={toggleModalOpen} />}
+      {isModalOpen && <ShowReport  toggleModalOpen={toggleModalOpen}  companyReport={modalData}/>}
     </div>
     
   );
