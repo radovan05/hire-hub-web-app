@@ -1,20 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./ShowReport.css";
 
+
+
 const ShowReport = ({ toggleModalOpen, companyReport }) => {
+
+  const [candidates, setCandidates] = useState([])
+
+  useEffect(() => {
+    const CANDIDATES_URL = `http://localhost:3333/api/candidates?id=${companyReport.candidateId}`
+    fetch(CANDIDATES_URL).then((res) => res.json()).then((data) => setCandidates(data[0]))
+  })
+  
+
   return (
-    <div className="modal">
+    <div className="modal" onClick={toggleModalOpen}>
       <div className="modal-content">
        
             <div className="report-data">
-              <p>Name: {companyReport.candidateName}</p>
-              <p>Phase: {companyReport.phase}</p>
-              <p>Status: {companyReport.status}</p>
+              <p><strong>Name:</strong> {companyReport.candidateName}</p>
+              <p><strong>Birthday:</strong> {candidates.birthday}</p>
+              <p><strong>Education:</strong> {candidates.education}</p>
+              <p><strong>Email:</strong> {candidates.email}</p>
+              <p><strong>Phase:</strong> {companyReport.phase}</p>
+              <p><strong>Status:</strong> {companyReport.status}</p>
               <p>
-                Interview Date:{" "}
+                <strong>Interview Date: </strong>
                 {new Date(companyReport.interviewDate).toLocaleString()}
               </p>
-              <p>Note: {companyReport.note}</p>
+              <p><strong>Note: </strong> {companyReport.note}</p>
             </div>
         
 
