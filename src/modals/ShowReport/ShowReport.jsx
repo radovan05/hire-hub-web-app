@@ -1,12 +1,22 @@
-import React from 'react'
-import './ShowReport.css'
+import React from "react";
+import "./ShowReport.css";
 
-const ShowReport = () => {
+const ShowReport = ({ toggleModalOpen }) => {
   return (
-    <div>
-      
+    <div className="modal">
+      <div className="modal-content">
+        <div className="report-data">
+          <p>qwe</p>
+          <p>rwe</p>
+          <p>dfg</p>
+        </div>
+        <div>
+          <button className="close-btn">X</button>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default ShowReport
+export default ShowReport;
+
