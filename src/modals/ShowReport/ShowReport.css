@@ -1,0 +1,41 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.556);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: white;
+  min-width: 40%;
+  min-height: 50%;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+
+.close-btn {
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  font-size: 36px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.report-data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
