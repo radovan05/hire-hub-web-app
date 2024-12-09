@@ -60,6 +60,12 @@ const AllCompaniesPage = ({ user }) => {
           );
         })}
       </div>
+      {isModalOpen && (
+        <CreateNewCompany
+          toggleModalOpen={toggleModalOpen}
+          token={user.accessToken}
+        />
+      )}
     </div>
   );
 };

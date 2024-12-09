@@ -29,8 +29,12 @@
       "id": 92859858,
       "name": "Microsoft",
       "email": "microsoft@gmail.com"
+    },
+    {
+      "name": "BIT",
+      "email": "bit@gmail.com",
+      "id": 92859859
     }
-   
   ],
   "candidates": [
     {
