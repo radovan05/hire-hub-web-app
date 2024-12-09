@@ -22,10 +22,11 @@ body {
   min-height: 79vh;
   display: flex;
   justify-content: space-around;
-  background-color: rgb(128, 148, 227);
-  color: white;
-  background-image: url("../../resources/pictures/bgimg.png");
+  background-color: rgb(245, 245, 220, 0.9);
+  color: rgb(94, 81, 68);
+  /* background-image: url("../../resources/pictures/bgimg.png"); */
   background-size: cover;
+  /* overflow: hidden; */
 }
 .info-right {
   width: 40%;
@@ -33,6 +34,9 @@ body {
   position: relative;
   top: 70px;
   animation: 0.8s ease-out 0s 1 slideInFromLeft;
+  background-color: rgb(182, 162, 142, 0.6);
+  border-radius: 25px;
+  padding: 30px;
 }
 .info-right h1 {
   text-align: center;
@@ -53,8 +57,11 @@ body {
   height: 40%;
   width: 40%;
   position: relative;
-  top: 420px;
+  top: 370px;
   animation: 1.4s ease-out 0s 1 slideInFromRight;
+  background-color: rgb(182, 162, 142, 0.6);
+  border-radius: 25px;
+  padding: 30px;
 }
 .info-left h1 {
   text-align: center;
@@ -72,16 +79,16 @@ body {
   height: 50px;
   margin-top: 30px;
   position: relative;
-  left: 280px;
+  left: 250px;
   border-radius: 30px;
-  background-color: rgba(0, 0, 255);
+  background-color: rgb(224, 123, 57);
   color: white;
   font-size: 16px;
-  box-shadow: 10px 10px 10px rgb(17, 17, 186);
+  /* box-shadow: 10px 10px 10px rgb(84, 58, 41); */
 }
 .info-left button:hover {
   /* color: rgb(255, 255, 255); */
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
   transition: 1s;
   /* font-weight: bold; */
   cursor: pointer;

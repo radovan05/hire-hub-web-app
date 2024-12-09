@@ -1,34 +1,43 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.companiesReport-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 79vh;
+.companiesReport-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 79vh;
+  background-color: rgb(245, 245, 220, 0.9);
+  color: rgb(94, 81, 68);
 }
-.companiesReport-main h1{
-    font-size: 45px;
-    margin-bottom: 10px;
-}
-
-.companiesReport-wrapper{
-    border: 1px solid gray;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    height: auto;
-    width: 35%;
-    
-
-}
-.companiesReport-container{
-    border: 1px solid gray;
-    padding: 10px;
-    font-size: 20px;
+.companiesReport-main h1 {
+  font-size: 45px;
+  margin-bottom: 10px;
 }
 
+.companiesReport-wrapper {
+  /* border: 1px solid gray; */
+  background-color: rgb(182, 162, 142, 0.6);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: auto;
+  width: 50%;
+  border-radius: 25px;
+}
+.companiesReport-container {
+  /* border: 1px solid gray; */
+  background-color: rgb(245, 245, 220, 0.9);
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+.companiesReport-container:hover {
+  box-shadow: 0 0 5px rgb(224, 123, 57);
+  background-color: rgb(224, 123, 57, 0.8);
+  color: rgb(220, 228, 201);
+}

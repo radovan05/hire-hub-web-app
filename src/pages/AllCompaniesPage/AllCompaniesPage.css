@@ -11,30 +11,43 @@
   justify-content: center;
   min-height: calc(100vh - 200px);
   width: 100%;
+  background-color: rgb(245, 245, 220, 0.9);
+  color: rgb(94, 81, 68);
 }
 
 .allCompaniesPage-wrapper {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  background-color: dimgray;
-  justify-content: center;
+  background-color: rgb(182, 162, 142, 0.6);
+  /* justify-content: center; */
   align-items: center;
-  height: auto;
-  width: 55%;
-  border: 1px solid black;
-  border-radius: 20px;
-  padding: 50px;
+  height: 70vh;
+  width: 70%;
+  /* border: 1px solid black; */
+  border-radius: 25px;
+  padding: 40px;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin: 10px 0;
 }
 
 .allCompaniesPage-container {
   display: flex;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 100%;
   padding: 10px;
-  font-size: 20px;
+  font-size: 24px;
   justify-content: space-between;
   cursor: pointer;
+  background-color: rgb(245, 245, 220, 0.9);
+  border-radius: 25px;
+}
+.allCompaniesPage-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 5px rgb(224, 123, 57);
+  background-color: rgb(224, 123, 57, 0.8);
+  color: rgb(220, 228, 201);
 }
 
 .allCompaniesPage-container button {
@@ -45,7 +58,7 @@
   border-radius: 5px;
 }
 
-.allCompaniesPage-create{
+.allCompaniesPage-create {
   padding: 10px;
   border-radius: 10px;
   font-size: 16px;

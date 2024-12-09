@@ -1,91 +1,85 @@
-.show{
-    -webkit-text-security: disc;
-    text-security: disc;
+.show {
+  -webkit-text-security: disc;
+  text-security: disc;
 }
-*{
-    user-select: none;
+* {
+  user-select: none;
 }
-.login-body{
-    z-index: 100;
-    position: fixed;
-    top:0;
-    width: 100%;
-    min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
+.login-body {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
 }
-.login-main-div{ 
-
-    position: fixed;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%, -50%); 
-    width: 35%;
-    aspect-ratio: 1/1;
-    background-color: dimgray;
-    border: 4px dotted azure;
-    border-radius: 35px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    gap: 30px;
+.login-main-div {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  aspect-ratio: 1/1;
+  background-color: rgb(179, 151, 122);
+  /* border: 4px dotted azure; */
+  border-radius: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 30px;
 }
-.login-main-text{
-    width: 100%;
-    font-size: xx-large;
-    text-align: center;
-    color:azure;
-    font-weight: bold;
-    letter-spacing: 3px;
-    margin-bottom: 55px;
+.login-main-text {
+  width: 100%;
+  font-size: xx-large;
+  text-align: center;
+  color: azure;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 55px;
 }
-.login-main-div> input{ 
-    width: 60%;
-    height: 50px;
-    border-radius: 25px;
-    padding-left: 25px;
-    font-size:medium;
-    font-weight: bold;
-    letter-spacing: 2px;
-
+.login-main-div > input {
+  width: 60%;
+  height: 50px;
+  border-radius: 25px;
+  padding-left: 25px;
+  font-size: medium;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: rgb(94, 81, 68);
 }
-.login-main-div> button{ 
-    width: 40%;
-    border-radius: 25px;
-    height: 50px;
-    background-color: dimgray;
-    border: 2px solid azure;
-    color: azure;
-    font-size:medium;
-    font-weight: bold;
-    letter-spacing: 2px;
-
-    
+.login-main-div > button {
+  width: 40%;
+  border-radius: 25px;
+  height: 50px;
+  background-color: rgb(224, 123, 57);
+  /* border: 2px solid azure; */
+  color: azure;
+  font-size: medium;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
 }
-input.login-box{
-    width: 30px;
+input.login-box {
+  width: 30px;
 }
-.login-main-div> button:hover{ 
-   
-    background-color: azure;
-    border: 2px solid dimgray;
-    color: dimgray;
-   
-
-    
+.login-main-div > button:hover {
+  background-color: azure;
+  border: 2px solid dimgray;
+  color: dimgray;
 }
 button.toggle-password {
-    color:dimgray;
-    position: absolute;
-    top: 59.8%;
-    right: 20%;
-    transform: translateY(-50%);
-    border: none;
-    background: none;
-    cursor: pointer;
-    width: 50px;
+  color: dimgray;
+  position: absolute;
+  top: 59.8%;
+  right: 21%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 50px;
+  height: 48px;
 }
-
-.login-show-pas{
-    color:white;
+.login-show-pas {
+  color: white;
 }
