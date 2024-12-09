@@ -3,12 +3,14 @@ import { useState, useEffect } from "react";
 import "./AllCompaniesPage.css";
 import { useNavigate } from "react-router";
 import Search from "../../components/Search/Search";
+import CreateNewCompany from "../../modals/CreateNewCompany/CreateNewCompany";
 
 const URL = "http://localhost:3333/api/companies";
 
-const AllCompaniesPage = () => {
+const AllCompaniesPage = ({ user }) => {
   const [companies, setCompanies] = useState([]);
   const [companiesCopy, setCompaniesCopy] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const navigate = useNavigate();
 
@@ -21,6 +23,10 @@ const AllCompaniesPage = () => {
       });
   }, []);
 
+  const toggleModalOpen = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   return (
     <div className="allCompaniesPage-main">
       <Search
@@ -30,6 +36,12 @@ const AllCompaniesPage = () => {
         notFilteredData={companies}
       />
       <div className="allCompaniesPage-wrapper">
+        {user?.user?.id === 1 ? (
+          <button className="allCompaniesPage-create" onClick={toggleModalOpen}>
+            Create company
+          </button>
+        ) : null}
+
         {companiesCopy.map((company, i) => {
           return (
             <div
