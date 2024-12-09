@@ -23,7 +23,7 @@ function App() {
     {user?null: <LogIn setUser={setUser} />}
     <Routes>
       <Route path="/" element={<HomePage/>}/>
-      <Route path="/companies" element={<AllCompaniesPage user={user}/>}/>
+      <Route path="/companies" element={<AllCompaniesPage user={user} setUser={setUser}/>}/>
       <Route path="/reports/:id" element={<CompaniesReportPage/>}/>
     </Routes>
     <Footer/>

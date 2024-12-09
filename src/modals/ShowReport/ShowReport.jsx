@@ -9,7 +9,7 @@ const ShowReport = ({ toggleModalOpen, companyReport }) => {
     fetch(CANDIDATES_URL)
       .then((res) => res.json())
       .then((data) => setCandidates(data[0]));
-  });
+  }, []);
 
   return (
     <div className="modal" onClick={toggleModalOpen}>
@@ -40,11 +40,10 @@ const ShowReport = ({ toggleModalOpen, companyReport }) => {
           <p>
             <strong>Note: </strong> {companyReport.note}
           </p>
-          
         </div>
-<button className="close-btn" onClick={toggleModalOpen}>
-            X
-          </button>
+        <button className="close-btn" onClick={toggleModalOpen}>
+          X
+        </button>
         <div></div>
       </div>
     </div>

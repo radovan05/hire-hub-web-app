@@ -4,13 +4,15 @@ import "./AllCompaniesPage.css";
 import { useNavigate } from "react-router";
 import Search from "../../components/Search/Search";
 import CreateNewCompany from "../../modals/CreateNewCompany/CreateNewCompany";
+// import { REPORTS_URL } from "../CompaniesReportPage/CompaniesReportPage";
 
 const URL = "http://localhost:3333/api/companies";
 
-const AllCompaniesPage = ({ user }) => {
+const AllCompaniesPage = ({ user, setUser }) => {
   const [companies, setCompanies] = useState([]);
   const [companiesCopy, setCompaniesCopy] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [refresh, setRefresh] = useState(false);
 
   const navigate = useNavigate();
 
@@ -21,10 +23,28 @@ const AllCompaniesPage = ({ user }) => {
         setCompanies(data);
         setCompaniesCopy(data);
       });
-  }, []);
+  }, [refresh]);
 
   const toggleModalOpen = () => {
     setIsModalOpen(!isModalOpen);
+  };
+
+  const deleteCompanyById = (id) => {
+    const REPORTS_URL = `http://localhost:3333/api/companies/${id}`;
+
+    fetch(REPORTS_URL, {
+      method: "DELETE",
+      headers: { Authorization: `Bearer ${user.accessToken}` },
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        return new Error("Something went wrong!");
+      })
+      .then(() => {
+        setRefresh((prevValue) => !prevValue);
+      });
   };
 
   return (
@@ -55,12 +75,29 @@ const AllCompaniesPage = ({ user }) => {
                 <h4>{company.name}</h4>
                 <p>{company.email}</p>
               </div>
-              <div>{/* <button>X</button> */}</div>
+              <div>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    deleteCompanyById(company.id);
+                  }}
+                >
+                  Delete
+                </button>
+              </div>
             </div>
           );
         })}
       </div>
-      {isModalOpen && <CreateNewCompany toggleModalOpen={toggleModalOpen} token={user.accessToken}/>}
+      {isModalOpen && (
+        <CreateNewCompany
+          toggleModalOpen={toggleModalOpen}
+          token={user.accessToken}
+          refresh={() => {
+            setRefresh((prevValue) => !prevValue);
+          }}
+        />
+      )}
     </div>
   );
 };
