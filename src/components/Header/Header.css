@@ -7,12 +7,12 @@
 .header-main-div {
   width: 100%;
   min-height: 100px;
-  background-color: dimgray;
+  background-color: rgb(220, 228, 201);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: azure;
-  letter-spacing: 2.5px;
+  color: rgb(94, 81, 68);
+  letter-spacing: 2px;
   /* font-weight: bold; */
   font-size: x-large;
 }
@@ -26,17 +26,30 @@
   width: 250px;
 }
 .header-pages > p:hover {
-  color: black;
-  letter-spacing: 5px;
-  transition: 1s;
+  color: rgb(94, 81, 68);
+  /* letter-spacing: 5px; */
+  /* transition: 1s; */
   font-weight: bold;
   cursor: pointer;
 }
 .header-selected {
-  text-decoration: underline;
+  text-decoration: solid;
+  font-weight: bolder;
 }
 
 @font-face {
   font-family: "main";
   src: url("../../resources/fonts/PlayfairDisplay-Regular.ttf");
+}
+.header-username {
+  width: 230px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.header-signout-selected:hover {
+  color: rgb(94, 81, 68);
+  /* letter-spacing: 5px; */
+  /* transition: 0.3s; */
+  font-weight: bold;
 }

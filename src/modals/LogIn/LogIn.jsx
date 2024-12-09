@@ -3,14 +3,13 @@ import "./LogIn.css";
 import { useState } from "react";
 import { useAsyncError } from "react-router";
 
-const LogIn = ({setUser}) => {
+const LogIn = ({ setUser }) => {
   const [pas, setPas] = useState("show");
   const [eye, setEye] = useState("fas fa-eye-slash");
-  const [username, setUsername]= useState("");
-  const [pass,setPass]=useState("");  
- 
+  const [username, setUsername] = useState("");
+  const [pass, setPass] = useState("");
+
   function LogIn() {
-   
     fetch(`http://localhost:3333/login`, {
       method: "POST",
       body: JSON.stringify({
@@ -23,28 +22,26 @@ const LogIn = ({setUser}) => {
     })
       .then((res) => res.json())
       .then((data) => makeUser(data))
-      .catch((er) => console.log(er))
-      
+      .catch((er) => console.log(er));
   }
-  function makeUser(data){ 
-    if(data.accessToken==="" || data.accessToken===undefined){
+  function makeUser(data) {
+    if (data.accessToken === "" || data.accessToken === undefined) {
       alert("Failed to login!");
-    }
-    else{ 
-      alert("Sucessfuly loged in!");
+    } else {
+      alert("Successfully signed in!");
       setUser(data);
     }
   }
+
   return (
     <div className="login-body">
       <div className="login-main-div">
-        <p className="login-main-text">Login </p>
+        <p className="login-main-text">Sign in </p>
         <input
           type="text"
           placeholder="E-mail"
           onChange={(e) => {
-            setUsername(e.target.value)
-         
+            setUsername(e.target.value);
           }}
         />
         <input
@@ -52,8 +49,10 @@ const LogIn = ({setUser}) => {
           placeholder="Password"
           className={pas}
           onChange={(e) => {
-            setPass( e.target.value);
-            
+            setPass(e.target.value);
+          }}
+          onKeyUp={(e) => {
+            if (e.key === "Enter") LogIn();
           }}
         />
         <button
@@ -73,10 +72,9 @@ const LogIn = ({setUser}) => {
         <button
           onClick={() => {
             LogIn();
-            
           }}
         >
-          Login
+          Sign in
         </button>
       </div>
     </div>

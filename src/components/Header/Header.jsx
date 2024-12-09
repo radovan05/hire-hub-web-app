@@ -46,17 +46,28 @@ const Header = ({ user, setUser }) => {
           </p>{" "}
         </div>
         <div className="header-username">
-          <p onClick={()=>{setLog(true)}}>{user?.user?.name ? user.user.name: "Login"}</p>{" "}
+          <p
+            onClick={() => {
+              setLog(true);
+            }}
+          >
+            {user?.user?.name ? user.user.name : "Login"}
+          </p>{" "}
           {log ? (
-            <p
-              onClick={() => {
-                setUser(undefined);
-                localStorage.removeItem('user');
-                 setLog(false);
-              }}
-            >
-              Logout
-            </p>
+            <>
+              {" "}
+              <p> | </p>{" "}
+              <p
+                className="header-signout-selected"
+                onClick={() => {
+                  setUser(undefined);
+                  localStorage.removeItem("user");
+                  setLog(false);
+                }}
+              >
+                Sign out
+              </p>
+            </>
           ) : null}
         </div>
       </div>
