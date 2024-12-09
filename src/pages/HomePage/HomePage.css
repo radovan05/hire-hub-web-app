@@ -26,6 +26,7 @@ body {
   color: rgb(94, 81, 68);
   /* background-image: url("../../resources/pictures/bgimg.png"); */
   background-size: cover;
+  /* overflow: hidden; */
 }
 .info-right {
   width: 40%;
