@@ -45,6 +45,7 @@ const CreateNewCompany = ({ toggleModalOpen, token, refresh }) => {
       alert("mail not good!");
     }
   };
+  
 
   return (
     <div className="modal" onClick={toggleModalOpen}>
@@ -79,11 +80,10 @@ const CreateNewCompany = ({ toggleModalOpen, token, refresh }) => {
               }}
             />
 
-            <button type="button" onClick={handleSubmit}>
-              Create
-            </button>
-          </form>
-        </div>
+          <button type="button" onClick={handleSubmit}>
+            Create
+          </button>
+        </form>
       </div>
     </div>
   );
