@@ -9,7 +9,7 @@ const ShowReport = ({ toggleModalOpen, companyReport }) => {
     fetch(CANDIDATES_URL)
       .then((res) => res.json())
       .then((data) => setCandidates(data[0]));
-  });
+  },[]);
 
   return (
     <div className="modal" onClick={toggleModalOpen}>
