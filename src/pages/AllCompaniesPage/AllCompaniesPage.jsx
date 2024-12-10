@@ -54,6 +54,7 @@ const AllCompaniesPage = ({ user, setUser }) => {
         });
       });
     if (delReviews.length !== 0) {
+      
       delReviews.map((el) => {
         fetch(`http://localhost:3333/api/reports/${el}`, {
           method: "DELETE",
