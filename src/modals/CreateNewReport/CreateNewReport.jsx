@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./CreateNewReport.css";
-import CreateNewCandidate from "../CreateNewCandidate/CreateNewCandidate"
+import CreateNewCandidate from "../CreateNewCandidate/CreateNewCandidate";
 
-const CreateNewReport = ({ closeModal,token,companyId, companyName }) => {
+const CreateNewReport = ({ closeModal, token, companyId, companyName }) => {
   const [candidates, setCandidates] = useState([]);
   const [dropdown, setDropdown] = useState("Select Candidate");
-  const [createNewCandidate, setCreateNewCandidate]=useState(false);
+  const [createNewCandidate, setCreateNewCandidate] = useState(false);
 
   let phase = "";
   let status = "";
@@ -19,8 +19,6 @@ const CreateNewReport = ({ closeModal,token,companyId, companyName }) => {
       });
   }, [createNewCandidate]);
 
- 
-
   return (
     <div
       className="create-new-rep-main-div"
@@ -28,19 +26,27 @@ const CreateNewReport = ({ closeModal,token,companyId, companyName }) => {
         closeModal(false);
       }}
     >
-      {createNewCandidate ?<CreateNewCandidate closeModal={setCreateNewCandidate} token={token}/>:null }
+      {createNewCandidate ? (
+        <CreateNewCandidate closeModal={setCreateNewCandidate} token={token} />
+      ) : null}
       <div
         className="create-new-rep-modal"
         onClick={(e) => e.stopPropagation()}
       >
-        <p className="create-new-rep-text"> Add new report</p>
+        <h2 className="create-new-rep-text"> Add a new report</h2>
         <div className="create-new-rep-form">
           {/* note status i datum i phase              */}
-          Candidate:
+          <h3>Candidate:</h3>
           <div className="create-new-rep-candidates">
             {dropdown?.name ?? dropdown}
             <div className="create-new-rep-dropdown">
-              <p onClick={()=>{setCreateNewCandidate(true)}}>Create New</p>
+              <p
+                onClick={() => {
+                  setCreateNewCandidate(true);
+                }}
+              >
+                <h4>+ Create New</h4>
+              </p>
               {candidates.map((el, i) => {
                 return (
                   <p
@@ -55,21 +61,21 @@ const CreateNewReport = ({ closeModal,token,companyId, companyName }) => {
               })}
             </div>
           </div>
-          Phase:{" "}
+          <h3>Phase</h3>{" "}
           <input
             type="text"
             onChange={(e) => {
               phase = e.target.input;
             }}
           />
-          Status:{" "}
+          <h3>Status</h3>{" "}
           <input
             type="text"
             onChange={(e) => {
               status = e.target.input;
             }}
           />
-          Note:{" "}
+          <h3>Note</h3>{" "}
           <textarea
             cols="30"
             rows="10"
@@ -85,29 +91,26 @@ const CreateNewReport = ({ closeModal,token,companyId, companyName }) => {
                 status !== "" &&
                 note !== ""
               ) {
-               
                 fetch(`http://localhost:3333/api/reports`, {
                   headers: {
-                    "Authorization": `Bearer ${token}`,
+                    Authorization: `Bearer ${token}`,
                     "Content-Type": "application/json",
                   },
                   method: "POST",
                   body: JSON.stringify({
                     candidateId: dropdown.id,
-                    candidateName:dropdown.name,
-                    companyId:companyId,
-                    companyName:companyName,
-                    interviewDate:(Date()),
-                    phase:phase,
-                    status:status,
-                    note:note
+                    candidateName: dropdown.name,
+                    companyId: companyId,
+                    companyName: companyName,
+                    interviewDate: Date(),
+                    phase: phase,
+                    status: status,
+                    note: note,
                   }),
-                })
-                  .then((res) => res.json())
-                  
-              }else{ 
-              alert('not good')
-            }
+                }).then((res) => res.json());
+              } else {
+                alert("not good");
+              }
             }}
           >
             {" "}

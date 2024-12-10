@@ -58,7 +58,7 @@ const AllCompaniesPage = ({ user, setUser }) => {
       <div className="allCompaniesPage-wrapper">
         {user?.user?.id === 1 ? (
           <button className="allCompaniesPage-create" onClick={toggleModalOpen}>
-            Create company
+            + Add a new company
           </button>
         ) : null}
 
@@ -82,7 +82,7 @@ const AllCompaniesPage = ({ user, setUser }) => {
                     deleteCompanyById(company.id);
                   }}
                 >
-                  Delete
+                  <i class="fa">&#xf014;</i>
                 </button>
               </div>
             </div>

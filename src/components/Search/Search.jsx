@@ -28,7 +28,7 @@ const Search = ({ data, setData, searchBy, notFilteredData }) => {
   return (
     <div className="search-div">
       <input
-        placeholder="Search companies..."
+        placeholder="Search..."
         type="text"
         className="search-input"
         onChange={debounce((e) => {

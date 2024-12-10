@@ -10,22 +10,25 @@
   justify-content: center;
 }
 
-.modal-content {
-  background-color: white;
-  min-width: 40%;
+.new-company-modal-content {
+  background-color: rgb(179, 151, 122);
+  width: 30%;
   min-height: 50%;
-  padding: 50px;
+  padding: 20px;
   display: flex;
-
   justify-content: space-between;
-  border-radius: 20px;
+  border-radius: 25px;
+  font-size: 20px;
 }
 
-.modal-content input {
+.new-company-modal-content input {
   border: 1px solid gray;
   /* width: 50%; */
   height: 40px;
   padding-left: 5px;
+  border-radius: 25px;
+  color: rgb(94, 81, 68);
+  font-size: 14px;
 }
 
 form {
@@ -37,11 +40,21 @@ form {
   justify-content: flex-start;
 }
 
-.modal-content button {
+.new-company-modal-content button {
   padding: 10px;
-  background-color: gray;
+  background-color: rgb(224, 123, 57);
   color: white;
-  border-radius: 10px;
+  border-radius: 25px;
   width: 40%;
   cursor: pointer;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.new-company-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: rgb(245, 245, 220, 0.9);
+  border-radius: 25px;
 }

@@ -1,60 +1,64 @@
-.create-new-rep-main-div{
-    position: fixed;
-    top: 0; 
-    left: 0;
-    width: 100%;
-    min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.create-new-rep-main-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.create-new-rep-modal {
+  width: 60%;
+  min-height: 75vh;
+  max-height: 75vh;
+  border-radius: 25px;
+  background-color: rgb(179, 151, 122);
+  display: flex;
+  justify-content: center;
+  align-content: start;
+  gap: 15px;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-size: 20px;
+}
+.create-new-rep-form {
+  width: 80%;
+  min-height: 80%;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  gap: 15px;
+  background-color: rgb(245, 245, 220, 0.9);
+  border-radius: 25px;
+  padding: 20px;
+}
+.create-new-rep-form > input {
+  border-radius: 25px;
+}
+.create-new-rep-text {
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+}
 
-}
-.create-new-rep-modal{
-    width: 50%;
-    min-height: 50vh;
-    max-height: 50vh;
-    border-radius: 25px;
-    background-color: azure;
-    display: flex;
-    justify-content: center;
-    align-content:start;
-    gap:25px;
-    flex-wrap: wrap;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-.create-new-rep-form{
-    width: 80%;
-    min-height: 80%;
-    display: flex;
-    justify-content: start;
-    flex-direction: column;
-    gap: 20px;
-    
-}
-.create-new-rep-text{
-    margin-top: 50px;
-    width: 100%;
-    text-align: center;
+.create-new-rep-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  border-radius: 25px;
+  cursor: pointer;
 }
 
-  
-  .create-new-rep-dropdown {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-  }
-  
-  .create-new-rep-candidates:hover .create-new-rep-dropdown {
-    display: block;
-  }
-  .create-new-rep-dropdown > p:hover {
-    background-color: black;
-    color: azure;
-  }
-  
+.create-new-rep-candidates:hover .create-new-rep-dropdown {
+  display: block;
+}
+.create-new-rep-dropdown > p:hover {
+  background-color: rgb(245, 245, 189);
+}

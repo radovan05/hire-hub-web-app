@@ -13,7 +13,7 @@ const CompaniesReportPage = ({ user }) => {
   const [modalData, setModalData] = useState("");
   const [reportCopy, setReportCopy] = useState([]);
   const [createNewRep, setCreateNewRep] = useState(false);
- 
+
   const REPORTS_URL = `http://localhost:3333/api/reports?companyId=${id}`;
 
   useEffect(() => {
@@ -24,8 +24,6 @@ const CompaniesReportPage = ({ user }) => {
         setReportCopy(data);
       });
   }, [id]);
-
-  
 
   const toggleModalOpen = () => {
     setIsModalOpen(!isModalOpen);
@@ -45,15 +43,22 @@ const CompaniesReportPage = ({ user }) => {
 
       <div className="companiesReport-wrapper">
         {user?.user.id === 1 ? (
-          <div
+          <button
             onClick={() => {
               setCreateNewRep(true);
             }}
           >
-            + Add New Report
-          </div>
+            + Add a new report
+          </button>
         ) : null}
-        {createNewRep ? <CreateNewReport closeModal={setCreateNewRep} token={user.accessToken} companyId={id} companyName={reports?.[0].companyName}/> : null}
+        {createNewRep ? (
+          <CreateNewReport
+            closeModal={setCreateNewRep}
+            token={user.accessToken}
+            companyId={id}
+            companyName={reports?.[0].companyName}
+          />
+        ) : null}
         {reports.length > 0 ? (
           reports.map((report, i) => (
             <div
