@@ -45,6 +45,7 @@ const CreateNewCompany = ({ toggleModalOpen, token, refresh }) => {
       alert("mail not good!");
     }
   };
+  
 
   return (
     <div className="modal" onClick={toggleModalOpen}>
