@@ -13,7 +13,7 @@ const CompaniesReportPage = ({ user }) => {
   const [modalData, setModalData] = useState("");
   const [reportCopy, setReportCopy] = useState([]);
   const [createNewRep, setCreateNewRep] = useState(false);
-
+  const [refresh,setRefresh]=useState(false);
   const REPORTS_URL = `http://localhost:3333/api/reports?companyId=${id}`;
 
   useEffect(() => {
@@ -23,17 +23,35 @@ const CompaniesReportPage = ({ user }) => {
         setReports(data);
         setReportCopy(data);
       });
-  }, [id]);
+  }, [id,refresh]);
 
   const toggleModalOpen = () => {
     setIsModalOpen(!isModalOpen);
   };
+  function  delReport(id){
+    console.log(id);
+    fetch(`http://localhost:3333/api/reports/${id}`, {
+      method: "DELETE",
+      headers: { Authorization: `Bearer ${user.accessToken}` },
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        return new Error("Something went wrong!");
+      })
+      .then(() => {
+        setRefresh((prevValue) => !prevValue);
+      });
 
-  if (!reports.length) return <p>Loading...</p>;
+  }
+
+
+
 
   return (
     <div className="companiesReport-main">
-      <h1>{reports?.[0].companyName}</h1>
+      <h1>{reports?.[0]?.companyName}</h1>
       <Search
         data={reports}
         setData={setReports}
@@ -68,13 +86,18 @@ const CompaniesReportPage = ({ user }) => {
                 toggleModalOpen();
                 setModalData(report);
               }}
-            >
+            > <div>
               <p>Name: {report.candidateName}</p>
               <p>Phase: {report.phase}</p>
               <p>
                 Interview Date:{" "}
                 {new Date(report.interviewDate).toLocaleString()}
-              </p>
+              </p></div>
+              {user?.user.id===1?<i className="fa" onClick={(e)=>{
+                delReport(report.id)
+                e.stopPropagation()
+              }}>&#xf014;</i>:undefined}
+              
             </div>
           ))
         ) : (
