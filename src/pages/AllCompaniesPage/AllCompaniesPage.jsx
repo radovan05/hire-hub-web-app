@@ -13,7 +13,7 @@ const AllCompaniesPage = ({ user, setUser }) => {
   const [companiesCopy, setCompaniesCopy] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [refresh, setRefresh] = useState(false);
-
+  let delReviews = [];
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -45,6 +45,32 @@ const AllCompaniesPage = ({ user, setUser }) => {
       .then(() => {
         setRefresh((prevValue) => !prevValue);
       });
+
+    fetch(`http://localhost:3333/api/reports?companyId=${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        data.map((el) => {
+          delReviews.push(el.id);
+        });
+      });
+    if (delReviews.length !== 0) {
+      delReviews.map((el) => {
+        fetch(`http://localhost:3333/api/reports/${el}`, {
+          method: "DELETE",
+          headers: { Authorization: `Bearer ${user.accessToken}` },
+        })
+          .then((response) => {
+            if (response.ok) {
+              return response.json();
+            }
+            return new Error("Something went wrong!");
+          })
+          .then(() => {
+            setRefresh((prevValue) => !prevValue);
+          });
+        delReviews = [];
+      });
+    }
   };
 
   return (
@@ -76,14 +102,16 @@ const AllCompaniesPage = ({ user, setUser }) => {
                 <p>{company.email}</p>
               </div>
               <div>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    deleteCompanyById(company.id);
-                  }}
-                >
-                  Delete
-                </button>
+                {user?.user?.id === 1 ? (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      deleteCompanyById(company.id);
+                    }}
+                  >
+                    Delete
+                  </button>
+                ) : null}
               </div>
             </div>
           );
