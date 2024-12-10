@@ -10,9 +10,9 @@
   align-items: center;
 }
 .create-new-rep-modal {
-  width: 60%;
-  min-height: 75vh;
-  max-height: 75vh;
+  width: 50%;
+  min-height: 85vh;
+  max-height: 85vh;
   border-radius: 25px;
   background-color: rgb(179, 151, 122);
   display: flex;
@@ -25,10 +25,11 @@
   font-size: 20px;
 }
 .create-new-rep-form {
-  width: 80%;
+  width: 65%;
   min-height: 80%;
   display: flex;
   justify-content: start;
+  align-items: center;
   flex-direction: column;
   gap: 15px;
   background-color: rgb(245, 245, 220, 0.9);
@@ -37,6 +38,18 @@
 }
 .create-new-rep-form > input {
   border-radius: 25px;
+  width: 65%;
+  height: 35px;
+  color: rgb(94, 81, 68);
+  padding: 10px;
+  font-size: 14px;
+}
+.create-new-rep-form > textarea {
+  border-radius: 25px;
+  padding: 10px;
+  font-size: 14px;
+  color: rgb(94, 81, 68);
+  width: 65%;
 }
 .create-new-rep-text {
   margin-top: 50px;
@@ -59,6 +72,10 @@
 .create-new-rep-candidates:hover .create-new-rep-dropdown {
   display: block;
 }
+.create-new-rep-candidates {
+  cursor: pointer;
+}
+
 .create-new-rep-dropdown > p:hover {
   background-color: rgb(245, 245, 189);
 }

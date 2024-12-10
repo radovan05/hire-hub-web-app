@@ -1,26 +1,54 @@
-.create-new-candidate-body{
-    position: fixed;
-    top: 0; 
-    left: 0;
-    width: 100%;
-    min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.create-new-candidate-body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.create-new-candidate-main-div{
-    width: 50%;
-    min-height: 50vh;
-    max-height: 50vh;
-    border-radius: 25px;
-    background-color: azure;
-    display: flex;
-    justify-content: start;
-    align-content:start;
-    gap:25px;
-    flex-wrap: wrap;
-    overflow-y: scroll;
-    overflow-x: hidden;
+.create-new-candidate-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.create-new-candidate-main-div {
+  width: 50%;
+  height: 50vh;
+  /* max-height: 50vh; */
+  border-radius: 25px;
+  background-color: rgb(245, 245, 220, 0.9);
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  gap: 30px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-size: 20px;
+}
+.create-new-candidate-main-div > h3 {
+  margin: 0 auto;
+  font-size: 24px;
+}
+.create-new-candidate-form {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
+}
+.create-new-candidate-form > input {
+  border-radius: 25px;
+  height: 35px;
+  color: rgb(94, 81, 68);
+  padding: 10px;
+}
+.create-new-candidate-go-back {
+  cursor: pointer;
+  padding: 5px;
 }

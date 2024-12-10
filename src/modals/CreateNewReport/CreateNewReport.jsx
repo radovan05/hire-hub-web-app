@@ -114,7 +114,7 @@ const CreateNewReport = ({ closeModal, token, companyId, companyName }) => {
             }}
           >
             {" "}
-            Create
+            Add
           </button>
         </div>
       </div>

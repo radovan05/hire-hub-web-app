@@ -54,7 +54,7 @@ const CreateNewCompany = ({ toggleModalOpen, token, refresh }) => {
       >
         <div className="new-company-div">
           <form>
-            <h2>Create New Company</h2>
+            <h2>Add a new company</h2>
             <label htmlFor="name">Name</label>
             <input
               type="text"
@@ -80,7 +80,7 @@ const CreateNewCompany = ({ toggleModalOpen, token, refresh }) => {
             />
 
             <button type="button" onClick={handleSubmit}>
-              Create
+              Add
             </button>
           </form>
         </div>
