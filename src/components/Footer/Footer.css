@@ -1,11 +1,11 @@
 .footer-main-div {
   width: 100%;
   min-height: 100px;
-  background-color: dimgray;
+  background-color: rgb(220, 228, 201);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: azure;
+  color: rgb(113, 98, 82);
   letter-spacing: 2.5px;
   font-size: large;
 }
