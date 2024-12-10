@@ -96,7 +96,7 @@ const CompaniesReportPage = ({ user }) => {
               {user?.user.id===1?<i className="fa" onClick={(e)=>{
                 delReport(report.id)
                 e.stopPropagation()
-              }}>&#xf014;</i>:null}
+              }}>&#xf014;</i>:undefined}
               
             </div>
           ))
