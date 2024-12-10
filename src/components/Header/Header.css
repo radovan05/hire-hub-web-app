@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "main";
+}
+.header-main-div {
+  width: 100%;
+  min-height: 100px;
+  background-color: rgb(220, 228, 201);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: rgb(94, 81, 68);
+  letter-spacing: 2px;
+  /* font-weight: bold; */
+  font-size: x-large;
+}
+.header-main-div > img {
+  width: 65px;
+  cursor: pointer;
+}
+.header-pages {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+}
+.header-pages > p:hover {
+  color: rgb(94, 81, 68);
+  /* letter-spacing: 5px; */
+  /* transition: 1s; */
+  font-weight: bold;
+  cursor: pointer;
+}
+.header-selected {
+  text-decoration: solid;
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: "main";
+  src: url("../../resources/fonts/PlayfairDisplay-Regular.ttf");
+}
+.header-username {
+  width: 230px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.header-signout-selected:hover {
+  color: rgb(94, 81, 68);
+  /* letter-spacing: 5px; */
+  /* transition: 0.3s; */
+  font-weight: bold;
+}

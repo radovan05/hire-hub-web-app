@@ -1,0 +1,267 @@
+{
+  "companies": [
+    {
+      "id": 34149463,
+      "name": "Google",
+      "email": "google@gmail.com"
+    },
+    {
+      "id": 11081915,
+      "name": "Facebook",
+      "email": "facebook@gmail.com"
+    },
+    {
+      "id": 35251209,
+      "name": "Instagram",
+      "email": "instagram@gmail.com"
+    },
+    {
+      "id": 92859858,
+      "name": "Microsoft",
+      "email": "microsoft@gmail.com"
+    },
+    {
+      "name": "BIT",
+      "email": "bit@gmail.com",
+      "id": 92859859
+    }
+  ],
+  "candidates": [
+    {
+      "id": 9451057,
+      "name": "Petar Petrovic",
+      "birthday": "Tue Sep 12 2002 16:57:16 GMT+0200 (CEST)",
+      "email": "petar.petrovic@yahoo.com",
+      "education": "Belgrade Institute of Technology",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/xadhix/128.jpg"
+    },
+    {
+      "id": 88648435,
+      "name": "Dragomir Despic",
+      "birthday": "Mon Feb 27 1990 05:26:30 GMT+0100 (CET)",
+      "email": "dragomir.despic@hotmail.com",
+      "education": "Belgrade Institute of Technology",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/aleksitappura/128.jpg"
+    },
+    {
+      "id": 99087456,
+      "name": "Lazar Lazic",
+      "birthday": "Fri Nov 17 1988 05:50:30 GMT+0100 (CET)",
+      "email": "lazar.lazic@yahoo.com",
+      "education": "Belgrade Institute of Technology",
+      "avatar": ""
+    },
+    {
+      "id": 66318927,
+      "name": "Miroslav Mikic",
+      "birthday": "Tue Aug 29 1998 04:35:15 GMT+0200 (CEST)",
+      "email": "miroslav.mikic@gmail.com",
+      "education": "Faculty of Electrical Engineering",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/eitarafa/128.jpg"
+    },
+    {
+      "id": 89091536,
+      "name": "Ana Ilic",
+      "birthday": "Tue Jul 09 2001 14:22:06 GMT+0100 (CET)",
+      "email": "ana.ilic@hotmail.com",
+      "education": "Belgrade Institute of Technology",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/javorszky/128.jpg"
+    },
+    {
+      "id": 6496882,
+      "name": "Maja Lazic",
+      "birthday": "Mon Nov 22 1999 13:13:07 GMT+0100 (CET)",
+      "email": "maja.lazic@hotmail.com",
+      "education": "Belgrade Institute of Technology",
+      "avatar": ""
+    },
+    {
+      "id": 6496802,
+      "name": "Stefan Stefanovic",
+      "birthday": "Wed Apr 16 2000 09:15:07 GMT+0100 (CET)",
+      "email": "stefan.stefanovic@hotmail.com",
+      "education": "Belgrade Institute of Technology",
+      "avatar": ""
+    },
+    {
+      "id": 6496803,
+      "name": "Marko Markovic",
+      "birthday": "Wed Mar 16 2003 13:33:07 GMT+0100 (CET)",
+      "email": "marko.markovic@hotmail.com",
+      "education": "Belgrade Institute of Technology",
+      "avatar": ""
+    },
+    {
+      "id": 6496804,
+      "name": "Nikola Nikolic",
+      "birthday": "Mon Aug 26 1992 17:31:07 GMT+0100 (CET)",
+      "email": "nikola.nikolic@hotmail.com",
+      "education": "Belgrade Institute of Technology",
+      "avatar": ""
+    },
+    {
+      "id": 6496805,
+      "name": "Milica Milic",
+      "birthday": "Wed Sep 13 1995 19:11:07 GMT+0100 (CET)",
+      "email": "milica.milic@hotmail.com",
+      "education": "Belgrade Institute of Technology",
+      "avatar": ""
+    },
+    {
+      "id": 6496806,
+      "name": "Goran Goranovic",
+      "birthday": "Thu Aug 01 1985 14:20:07 GMT+0100 (CET)",
+      "email": "goran.goranovic@hotmail.com",
+      "education": "Belgrade Institute of Technology",
+      "avatar": ""
+    },
+    {
+      "id": 6496807,
+      "name": "Ivan Ivanovic",
+      "birthday": "Fri Apr 07 1997 05:10:07 GMT+0100 (CET)",
+      "email": "ivan.ivanovic@hotmail.com",
+      "education": "Belgrade Institute of Technology",
+      "avatar": ""
+    },
+    {
+      "name": "aksneakjsddsaas",
+      "birthday": "2024-12-23",
+      "email": "dsadsadasdsada@dmas.com",
+      "education": "sdasdasdsa",
+      "id": 99087457
+    },
+    {
+      "name": "dsada",
+      "birthday": "2024-12-16",
+      "email": "dsad@da.dsa",
+      "education": "dsadas",
+      "id": 99087458
+    }
+  ],
+  "reports": [
+    {
+      "id": 33060290,
+      "candidateId": 9451057,
+      "candidateName": "Petar Petrovic",
+      "companyId": 92859858,
+      "companyName": "Microsoft",
+      "interviewDate": "Fri Jan 10 2018 20:13:29 GMT+0100 (CET)",
+      "phase": "hr",
+      "status": "passed",
+      "note": "Rerum accusantium expedita consequatur quo non error et. Animi consequatur magnam et impedit. Beatae et voluptatem labore repudiandae labore totam ut esse. Cum quidem in nobis et necessitatibus reiciendis officia voluptas. Quia aut dignissimos totam ut. Ut quo non nam quaerat consequatur quo qui."
+    },
+    {
+      "id": 33060281,
+      "candidateId": 6496802,
+      "candidateName": "Stefan Stefanovic",
+      "companyId": 92859858,
+      "companyName": "Microsoft",
+      "interviewDate": "Fri Jan 10 2018 20:13:29 GMT+0100 (CET)",
+      "phase": "hr",
+      "status": "passed",
+      "note": "Rerum accusantium expedita consequatur quo non error et. Animi consequatur magnam et impedit. Beatae et voluptatem labore repudiandae labore totam ut esse. Cum quidem in nobis et necessitatibus reiciendis officia voluptas. Quia aut dignissimos totam ut. Ut quo non nam quaerat consequatur quo qui."
+    },
+    {
+      "id": 61646703,
+      "candidateId": 66318927,
+      "candidateName": "Miroslav Mikic",
+      "companyId": 11081915,
+      "companyName": "Facebook",
+      "interviewDate": "Fri Jan 12 2018 08:39:19 GMT+0100 (CET)",
+      "phase": "hr",
+      "status": "declined",
+      "note": "Velit facilis sint pariatur et accusantium. Quia consectetur quo distinctio vel quae voluptas aliquam id. Qui fugit blanditiis consequatur porro qui est."
+    },
+    {
+      "id": 61646703,
+      "candidateId": 6496806,
+      "candidateName": "Goran Goranovic",
+      "companyId": 11081915,
+      "companyName": "Facebook",
+      "interviewDate": "Wed Feb 22 2021 08:49:19 GMT+0100 (CET)",
+      "phase": "cv",
+      "status": "passed",
+      "note": "Velit facilis sint pariatur et accusantium. Quia consectetur quo distinctio vel quae voluptas aliquam id. Qui fugit blanditiis consequatur porro qui est."
+    },
+    {
+      "id": 61646704,
+      "candidateId": 99087456,
+      "candidateName": "Lazar Lazic",
+      "companyId": 34149463,
+      "companyName": "Google",
+      "interviewDate": "Thu Feb 10 2018 08:39:19 GMT+0100 (CET)",
+      "phase": "cv",
+      "status": "declined",
+      "note": "Velit facilis sint pariatur et accusantium. Quia consectetur quo distinctio vel quae voluptas aliquam id. Qui fugit blanditiis consequatur porro qui est."
+    },
+    {
+      "id": 61646704,
+      "candidateId": 6496807,
+      "candidateName": "Ivan Ivanovic",
+      "companyId": 34149463,
+      "companyName": "Google",
+      "interviewDate": "Mon May 18 2017 10:44:19 GMT+0100 (CET)",
+      "phase": "cv",
+      "status": "passed",
+      "note": "Velit facilis sint pariatur et accusantium. Quia consectetur quo distinctio vel quae voluptas aliquam id. Qui fugit blanditiis consequatur porro qui est."
+    },
+    {
+      "id": 61646706,
+      "candidateId": 6496882,
+      "candidateName": "Maja Lazic",
+      "companyId": 35251209,
+      "companyName": "Instagram",
+      "interviewDate": "Fri Apr 20 2018 09:19:19 GMT+0100 (CET)",
+      "phase": "cv",
+      "status": "passed",
+      "note": "Velit facilis sint pariatur et accusantium. Quia consectetur quo distinctio vel quae voluptas aliquam id. Qui fugit blanditiis consequatur porro qui est."
+    },
+    {
+      "id": 61646706,
+      "candidateId": 6496804,
+      "candidateName": "Nikola Nikolic",
+      "companyId": 35251209,
+      "companyName": "Instagram",
+      "interviewDate": "Sat May 10 2019 11:29:19 GMT+0100 (CET)",
+      "phase": "hr",
+      "status": "declined",
+      "note": "Velit facilis sint pariatur et accusantium. Quia consectetur quo distinctio vel quae voluptas aliquam id. Qui fugit blanditiis consequatur porro qui est."
+    },
+    {
+      "candidateId": 99087456,
+      "candidateName": "Lazar Lazic",
+      "interviewDate": "Mon Dec 09 2024 15:27:28 GMT+0100 (Central European Standard Time)",
+      "id": 61646709
+    }
+  ],
+  "users": [
+    {
+      "email": "urossradovanovic@gmail.com",
+      "password": "$2a$10$Ht9ATCnB3LhyEpPg.c/GOuLzkMYD2WRPZ3ZtFVP.uVCrx.nW/rwVq",
+      "name": "Admin",
+      "age": 19,
+      "id": 1
+    },
+    {
+      "email": "djolestojilkovic@gmail.com",
+      "password": "$2a$10$Ht9ATCnB3LhyEpPg.c/GOuLzkMYD2WRPZ3ZtFVP.uVCrx.nW/rwVq",
+      "name": "Djolence",
+      "age": 404,
+      "id": 2
+    },
+    {
+      "email": "somiqs@gmail.com",
+      "password": "$2a$10$Ht9ATCnB3LhyEpPg.c/GOuLzkMYD2WRPZ3ZtFVP.uVCrx.nW/rwVq",
+      "name": "Miki",
+      "age": 102,
+      "id": 3
+    },
+    {
+      "email": "urosinter@gmail.com",
+      "password": "$2a$10$Ht9ATCnB3LhyEpPg.c/GOuLzkMYD2WRPZ3ZtFVP.uVCrx.nW/rwVq",
+      "name": "Uros",
+      "age": 4,
+      "id": 4
+    }
+  ]
+}

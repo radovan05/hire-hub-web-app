@@ -1,0 +1,69 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.556);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: rgb(179, 151, 122);
+  width: 65%;
+  min-height: 40%;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+/* .close-btn {
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+} */
+
+.report-data {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+}
+.report-data-left {
+  width: 110%;
+  padding: 20px;
+  font-size: 20px;
+  background-color: rgb(245, 245, 220, 0.9);
+  border-radius: 25px;
+}
+.report-data-left > h2 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+.report-data-left > p {
+  padding: 8px;
+}
+.report-data-right {
+  padding: 20px;
+  font-size: 20px;
+  background-color: rgb(245, 245, 220, 0.9);
+  border-radius: 25px;
+}
+.report-data-right > h2 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 23px;
+}
+.report-data-right > p {
+  padding: 8px;
+}
