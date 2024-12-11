@@ -102,14 +102,16 @@ const AllCompaniesPage = ({ user, setUser }) => {
                 <p>{company.email}</p>
               </div>
               <div>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    deleteCompanyById(company.id);
-                  }}
-                >
-                  <i class="fa">&#xf014;</i>
-                </button>
+                {user?.user?.id === 1 ? (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      deleteCompanyById(company.id);
+                    }}
+                  >
+                    <i class="fa">&#xf014;</i>
+                  </button>
+                ) : null}
               </div>
             </div>
           );
