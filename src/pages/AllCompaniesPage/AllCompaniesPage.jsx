@@ -73,6 +73,14 @@ const AllCompaniesPage = ({ user, setUser }) => {
     }
   };
 
+  const handleConfirmation = (companyId, event) => {
+    event.stopPropagation(); 
+    const userResponse = window.confirm("Are you sure you want to delete this company?");
+    if (userResponse) {
+      deleteCompanyById(companyId);  
+    }
+  };
+
   return (
     <div className="allCompaniesPage-main">
       <Search
@@ -104,10 +112,7 @@ const AllCompaniesPage = ({ user, setUser }) => {
               <div>
                 {user?.user?.id === 1 ? (
                   <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      deleteCompanyById(company.id);
-                    }}
+                    onClick={(e) => handleConfirmation(company.id, e)} 
                   >
                     <i className="fa">&#xf014;</i>
                   </button>
