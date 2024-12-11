@@ -73,3 +73,12 @@
 .companiesReport-container > button:hover {
   background-color: red;
 }
+.company-reports-go-back {
+  font-size: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  width: 12%;
+}
+.company-reports-go-back:hover {
+  font-weight: bold;
+}

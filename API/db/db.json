@@ -122,6 +122,13 @@
       "email": "ivan.ivanovic@hotmail.com",
       "education": "Belgrade Institute of Technology",
       "avatar": ""
+    },
+    {
+      "name": "Stefan Dailoski",
+      "birthday": "2024-12-19",
+      "email": "stefan@gmail.com",
+      "education": "BIT",
+      "id": 99087457
     }
   ],
   "reports": [
@@ -209,19 +216,25 @@
       "id": 61646709
     },
     {
-      "candidateId": 9451057,
-      "candidateName": "Petar Petrovic",
+      "candidateId": 88648435,
+      "candidateName": "Dragomir Despic",
       "companyId": "92859859",
       "companyName": "BIT",
-      "interviewDate": "Wed Dec 11 2024 11:59:55 GMT+0100 (Central European Standard Time)",
+      "interviewDate": "Wed Dec 11 2024 14:29:58 GMT+0100 (Central European Standard Time)",
+      "phase": "dsadassad",
+      "status": "dasdasdas",
+      "note": "dsadasdas",
       "id": 61646710
     },
     {
-      "candidateId": 99087456,
-      "candidateName": "Lazar Lazic",
+      "candidateId": 99087457,
+      "candidateName": "Stefan Dailoski",
       "companyId": "92859859",
       "companyName": "BIT",
-      "interviewDate": "Wed Dec 11 2024 12:01:03 GMT+0100 (Central European Standard Time)",
+      "interviewDate": "Wed Dec 11 2024 14:44:29 GMT+0100 (Central European Standard Time)",
+      "phase": "das",
+      "status": "dasdas",
+      "note": "dasasddas",
       "id": 61646711
     }
   ],

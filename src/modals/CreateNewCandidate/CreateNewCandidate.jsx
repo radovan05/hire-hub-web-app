@@ -10,6 +10,12 @@ const CreateNewReport = ({ closeModal, token }) => {
     var re = /\S+@\S+\.\S+/;
     return re.test(email);
   }
+  function validateDate() {
+    const currentYear = new Date().getFullYear();
+    const selectedYear = new Date(bDay).getFullYear();
+    const resYear = currentYear - selectedYear;
+    if (resYear > 18) return true;
+  }
   function sendData() {
     fetch(`http://localhost:3333/api/candidates`, {
       headers: {
@@ -84,13 +90,13 @@ const CreateNewReport = ({ closeModal, token }) => {
                   bDay !== "" &&
                   education !== ""
                 ) {
-                  if (validateEmail(email)) {
+                  if (validateEmail(email) && validateDate(bDay)) {
                     sendData();
                   } else {
-                    alert("email not good");
+                    alert("Input info is not correct");
                   }
                 } else {
-                  alert("not good");
+                  alert("Not correct");
                 }
               }}
             >

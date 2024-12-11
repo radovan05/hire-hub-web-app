@@ -1,5 +1,6 @@
 import React from "react";
 import "./CompaniesReportPage.css";
+import { Navigate, useNavigate } from "react-router";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import ShowReport from "../../modals/ShowReport/ShowReport";
@@ -16,6 +17,7 @@ const CompaniesReportPage = ({ user }) => {
   const [createNewRep, setCreateNewRep] = useState(false);
   const [refresh, setRefresh] = useState(false);
   const REPORTS_URL = `http://localhost:3333/api/reports?companyId=${id}`;
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(REPORTS_URL)
@@ -72,8 +74,13 @@ const CompaniesReportPage = ({ user }) => {
         searchBy={"candidateName"}
         notFilteredData={reportCopy}
       />
-
       <div className="companiesReport-wrapper">
+        <p
+          className="company-reports-go-back"
+          onClick={() => {
+            navigate("/companies");
+          }}
+        >{`< Go back`}</p>
         {user?.user.id === 1 ? (
           <button
             onClick={() => {
