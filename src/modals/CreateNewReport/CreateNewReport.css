@@ -79,3 +79,13 @@
 .create-new-rep-dropdown > p:hover {
   background-color: rgb(245, 245, 189);
 }
+.create-new-rep-form > button {
+  background-color: rgb(224, 123, 57, 0.9);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 25px;
+  color: white;
+  font-size: 20px;
+  width: 15%;
+  font-size: 16px;
+}

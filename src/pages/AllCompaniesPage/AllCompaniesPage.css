@@ -81,6 +81,9 @@
   color: white;
   font-size: 20px;
 }
+.allCompaniesPage-container button:hover {
+  background-color: red;
+}
 
 .allCompaniesPage-create {
   padding: 10px;

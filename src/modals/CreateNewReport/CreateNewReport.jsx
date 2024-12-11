@@ -45,7 +45,7 @@ const CreateNewReport = ({ closeModal, token, companyId, companyName }) => {
                   setCreateNewCandidate(true);
                 }}
               >
-                <h4>+ Create New</h4>
+                <b>+ Create New</b>
               </p>
               {candidates.map((el, i) => {
                 return (
@@ -65,14 +65,14 @@ const CreateNewReport = ({ closeModal, token, companyId, companyName }) => {
           <input
             type="text"
             onChange={(e) => {
-              phase = e.target.input;
+              phase = e.target.value;
             }}
           />
           <h3>Status</h3>{" "}
           <input
             type="text"
             onChange={(e) => {
-              status = e.target.input;
+              status = e.target.value;
             }}
           />
           <h3>Note</h3>{" "}
@@ -80,7 +80,7 @@ const CreateNewReport = ({ closeModal, token, companyId, companyName }) => {
             cols="30"
             rows="10"
             onChange={(e) => {
-              note = e.target.input;
+              note = e.target.value;
             }}
           ></textarea>
           <button
@@ -108,6 +108,7 @@ const CreateNewReport = ({ closeModal, token, companyId, companyName }) => {
                     note: note,
                   }),
                 }).then((res) => res.json());
+                closeModal(false);
               } else {
                 alert("not good");
               }

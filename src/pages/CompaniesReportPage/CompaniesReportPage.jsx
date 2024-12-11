@@ -14,7 +14,7 @@ const CompaniesReportPage = ({ user }) => {
   const [modalData, setModalData] = useState("");
   const [reportCopy, setReportCopy] = useState([]);
   const [createNewRep, setCreateNewRep] = useState(false);
-  const [refresh,setRefresh]=useState(false);
+  const [refresh, setRefresh] = useState(false);
   const REPORTS_URL = `http://localhost:3333/api/reports?companyId=${id}`;
 
   useEffect(() => {
@@ -24,21 +24,29 @@ const CompaniesReportPage = ({ user }) => {
         setReports(data);
         setReportCopy(data);
       });
-  }, [id,refresh]);
+  }, [id, refresh, createNewRep]);
 
   useEffect(() => {
     fetch(`http://localhost:3333/api/companies/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setCompanyName(data.name);
-        
       });
   }, [id]);
 
   const toggleModalOpen = () => {
     setIsModalOpen(!isModalOpen);
   };
-  function  delReport(id){
+  const handleConfirmation = (companyId, event) => {
+    event.stopPropagation();
+    const userResponse = window.confirm(
+      "Are you sure you want to delete this company?"
+    );
+    if (userResponse) {
+      delReport(companyId);
+    }
+  };
+  function delReport(id) {
     console.log(id);
     fetch(`http://localhost:3333/api/reports/${id}`, {
       method: "DELETE",
@@ -53,11 +61,7 @@ const CompaniesReportPage = ({ user }) => {
       .then(() => {
         setRefresh((prevValue) => !prevValue);
       });
-
   }
-
-
-
 
   return (
     <div className="companiesReport-main">
@@ -96,18 +100,28 @@ const CompaniesReportPage = ({ user }) => {
                 toggleModalOpen();
                 setModalData(report);
               }}
-            > <div>
-              <p>Name: {report.candidateName}</p>
-              <p>Phase: {report.phase}</p>
-              <p>
-                Interview Date:{" "}
-                {new Date(report.interviewDate).toLocaleString()}
-              </p></div>
-              {user?.user.id===1?<i className="fa" onClick={(e)=>{
-                delReport(report.id)
-                e.stopPropagation()
-              }}>&#xf014;</i>:undefined}
-              
+            >
+              {" "}
+              <div>
+                <p>Name: {report.candidateName}</p>
+                <p>Phase: {report.phase}</p>
+                <p>
+                  Interview Date:{" "}
+                  {new Date(report.interviewDate).toLocaleString()}
+                </p>
+              </div>
+              {user?.user.id === 1 ? (
+                <button className="report-del-btn">
+                  <i
+                    className="fa"
+                    onClick={(e) => {
+                      handleConfirmation(report.id, e);
+                    }}
+                  >
+                    &#xf014;
+                  </i>
+                </button>
+              ) : undefined}
             </div>
           ))
         ) : (

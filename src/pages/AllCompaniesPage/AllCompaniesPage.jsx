@@ -114,7 +114,7 @@ const AllCompaniesPage = ({ user, setUser }) => {
                   <button
                     onClick={(e) => handleConfirmation(company.id, e)} 
                   >
-                    <i class="fa">&#xf014;</i>
+                    <i className="fa">&#xf014;</i>
                   </button>
                 ) : null}
               </div>
