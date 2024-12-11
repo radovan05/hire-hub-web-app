@@ -9,6 +9,7 @@ import CreateNewReport from "../../modals/CreateNewReport/CreateNewReport";
 const CompaniesReportPage = ({ user }) => {
   const [reports, setReports] = useState([]);
   const { id } = useParams();
+  const [companyName, setCompanyName] = useState(undefined);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalData, setModalData] = useState("");
   const [reportCopy, setReportCopy] = useState([]);
@@ -24,6 +25,15 @@ const CompaniesReportPage = ({ user }) => {
         setReportCopy(data);
       });
   }, [id,refresh]);
+
+  useEffect(() => {
+    fetch(`http://localhost:3333/api/companies/${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setCompanyName(data.name);
+        
+      });
+  }, [id]);
 
   const toggleModalOpen = () => {
     setIsModalOpen(!isModalOpen);
@@ -51,7 +61,7 @@ const CompaniesReportPage = ({ user }) => {
 
   return (
     <div className="companiesReport-main">
-      <h1>{reports?.[0]?.companyName}</h1>
+      <h1>{companyName}</h1>
       <Search
         data={reports}
         setData={setReports}
@@ -74,7 +84,7 @@ const CompaniesReportPage = ({ user }) => {
             closeModal={setCreateNewRep}
             token={user.accessToken}
             companyId={id}
-            companyName={reports?.[0].companyName}
+            companyName={companyName}
           />
         ) : null}
         {reports.length > 0 ? (
