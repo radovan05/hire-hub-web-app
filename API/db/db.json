@@ -178,17 +178,6 @@
     },
     {
       "id": 61646704,
-      "candidateId": 99087456,
-      "candidateName": "Lazar Lazic",
-      "companyId": 34149463,
-      "companyName": "Google",
-      "interviewDate": "Thu Feb 10 2018 08:39:19 GMT+0100 (CET)",
-      "phase": "cv",
-      "status": "declined",
-      "note": "Velit facilis sint pariatur et accusantium. Quia consectetur quo distinctio vel quae voluptas aliquam id. Qui fugit blanditiis consequatur porro qui est."
-    },
-    {
-      "id": 61646704,
       "candidateId": 6496807,
       "candidateName": "Ivan Ivanovic",
       "companyId": 34149463,
@@ -225,6 +214,22 @@
       "candidateName": "Lazar Lazic",
       "interviewDate": "Mon Dec 09 2024 15:27:28 GMT+0100 (Central European Standard Time)",
       "id": 61646709
+    },
+    {
+      "candidateId": 9451057,
+      "candidateName": "Petar Petrovic",
+      "companyId": "92859859",
+      "companyName": "BIT",
+      "interviewDate": "Wed Dec 11 2024 11:59:55 GMT+0100 (Central European Standard Time)",
+      "id": 61646710
+    },
+    {
+      "candidateId": 99087456,
+      "candidateName": "Lazar Lazic",
+      "companyId": "92859859",
+      "companyName": "BIT",
+      "interviewDate": "Wed Dec 11 2024 12:01:03 GMT+0100 (Central European Standard Time)",
+      "id": 61646711
     }
   ],
   "users": [
