@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./CreateNewReport.css";
 import CreateNewCandidate from "../CreateNewCandidate/CreateNewCandidate";
 
-const CreateNewReport = ({ closeModal, token, companyId, companyName }) => {
+const CreateNewReport = ({ closeModal, token, companyId, companyName,setLogin }) => {
   const [candidates, setCandidates] = useState([]);
   const [dropdown, setDropdown] = useState("Select Candidate");
   const [createNewCandidate, setCreateNewCandidate] = useState(false);
@@ -27,7 +27,7 @@ const CreateNewReport = ({ closeModal, token, companyId, companyName }) => {
       }}
     >
       {createNewCandidate ? (
-        <CreateNewCandidate closeModal={setCreateNewCandidate} token={token} />
+        <CreateNewCandidate closeModal={setCreateNewCandidate} token={token} setLogin={setLogin}/>
       ) : null}
       <div
         className="create-new-rep-modal"
@@ -107,7 +107,11 @@ const CreateNewReport = ({ closeModal, token, companyId, companyName }) => {
                     status: status,
                     note: note,
                   }),
-                }).then((res) => res.json());
+                }).then((res) => res.json()).then(data => {
+                  if (data === "jwt expired") {
+                    setLogin(false);
+                  }
+                });
                 closeModal(false);
               } else {
                 alert("not good");

@@ -7,7 +7,7 @@ import ShowReport from "../../modals/ShowReport/ShowReport";
 import Search from "../../components/Search/Search";
 import CreateNewReport from "../../modals/CreateNewReport/CreateNewReport";
 
-const CompaniesReportPage = ({ user }) => {
+const CompaniesReportPage = ({ user, setLogin }) => {
   const [reports, setReports] = useState([]);
   const { id } = useParams();
   const [companyName, setCompanyName] = useState(undefined);
@@ -49,18 +49,16 @@ const CompaniesReportPage = ({ user }) => {
     }
   };
   function delReport(id) {
-    console.log(id);
     fetch(`http://localhost:3333/api/reports/${id}`, {
       method: "DELETE",
       headers: { Authorization: `Bearer ${user.accessToken}` },
     })
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
+      .then((res) => res.json())
+      .then((data) => {
+       
+        if (data === "jwt expired") {
+          setLogin(false);
         }
-        return new Error("Something went wrong!");
-      })
-      .then(() => {
         setRefresh((prevValue) => !prevValue);
       });
   }
@@ -96,6 +94,7 @@ const CompaniesReportPage = ({ user }) => {
             token={user.accessToken}
             companyId={id}
             companyName={companyName}
+            setLogin={setLogin}
           />
         ) : null}
         {reports.length > 0 ? (

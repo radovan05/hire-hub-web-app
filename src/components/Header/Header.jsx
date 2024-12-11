@@ -3,12 +3,16 @@ import "./Header.css";
 import { Navigate, useNavigate } from "react-router";
 import { useState } from "react";
 
-const Header = ({ user, setUser }) => {
-  const [log, setLog] = useState(undefined);
+const Header = ({ user, setUser,login ,setLogin }) => {
+  const [log,setLog] = useState(false);
   const navigate = useNavigate();
   let classSelectedHome;
   let classSelectedCompanies;
-
+  if(login===false){
+    setUser(undefined);
+    localStorage.removeItem("user");
+    
+  }
   if (window.location.pathname === "/") {
     classSelectedHome = "header-selected";
     classSelectedCompanies = "";
@@ -48,7 +52,7 @@ const Header = ({ user, setUser }) => {
         <div className="header-username">
           <p
             onClick={() => {
-              setLog(true);
+              setLog(!log);
             }}
           >
             {user?.user?.name ? user.user.name : "Login"}

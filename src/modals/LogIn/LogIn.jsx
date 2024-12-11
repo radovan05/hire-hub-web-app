@@ -3,7 +3,7 @@ import "./LogIn.css";
 import { useState } from "react";
 import { useAsyncError } from "react-router";
 
-const LogIn = ({ setUser }) => {
+const LogIn = ({ setUser,login,setLogin }) => {
   const [pas, setPas] = useState("show");
   const [eye, setEye] = useState("fas fa-eye-slash");
   const [username, setUsername] = useState("");
@@ -32,7 +32,7 @@ const LogIn = ({ setUser }) => {
       setUser(data);
     }
   }
-
+  
   return (
     <div className="login-body">
       <div className="login-main-div">

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./CreateNewCandidate.css";
 
-const CreateNewReport = ({ closeModal, token }) => {
+const CreateNewReport = ({ closeModal, token,setLogin }) => {
   let name = "";
   let email = "";
   let bDay = "";
@@ -32,7 +32,9 @@ const CreateNewReport = ({ closeModal, token }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        if (data === "jwt expired") {
+          setLogin(false);
+        }
       });
     closeModal(false);
   }

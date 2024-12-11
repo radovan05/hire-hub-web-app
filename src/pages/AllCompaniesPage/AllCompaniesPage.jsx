@@ -8,7 +8,7 @@ import CreateNewCompany from "../../modals/CreateNewCompany/CreateNewCompany";
 
 const URL = "http://localhost:3333/api/companies";
 
-const AllCompaniesPage = ({ user, setUser }) => {
+const AllCompaniesPage = ({ user, setUser,setLogin }) => {
   const [companies, setCompanies] = useState([]);
   const [companiesCopy, setCompaniesCopy] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -36,13 +36,11 @@ const AllCompaniesPage = ({ user, setUser }) => {
       method: "DELETE",
       headers: { Authorization: `Bearer ${user.accessToken}` },
     })
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
+      .then(res => res.json())
+      .then((data) => {
+        if (data === "jwt expired") {
+          setLogin(false);
         }
-        return new Error("Something went wrong!");
-      })
-      .then(() => {
         setRefresh((prevValue) => !prevValue);
       });
 
@@ -129,6 +127,7 @@ const AllCompaniesPage = ({ user, setUser }) => {
           refresh={() => {
             setRefresh((prevValue) => !prevValue);
           }}
+          setLogin={setLogin}
         />
       )}
     </div>

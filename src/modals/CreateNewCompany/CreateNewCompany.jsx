@@ -5,7 +5,7 @@ import { useNavigate } from "react-router";
 
 const URL = "http://localhost:3333/api/companies";
 
-const CreateNewCompany = ({ toggleModalOpen, token, refresh }) => {
+const CreateNewCompany = ({ toggleModalOpen, token, refresh, setLogin }) => {
   const [payLoad, setPayLoad] = React.useState({
     name: "",
     email: "",
@@ -35,7 +35,9 @@ const CreateNewCompany = ({ toggleModalOpen, token, refresh }) => {
           }),
         })
           .then((res) => res.json())
-          .then((data) => console.log(data));
+          .then((data) => {if (data === "jwt expired") {
+            setLogin(false);
+          }});
         toggleModalOpen();
         refresh();
       } else {
