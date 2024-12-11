@@ -58,6 +58,18 @@
   font-size: 20px;
   width: 15%;
   font-size: 16px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   margin-bottom: 30px;
+}
+.companiesReport-container > button {
+  background-color: rgb(224, 123, 57, 0.9);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 25px;
+  color: white;
+  font-size: 20px;
+  width: 40px;
+}
+.companiesReport-container > button:hover {
+  background-color: red;
 }
