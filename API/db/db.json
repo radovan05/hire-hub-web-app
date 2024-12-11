@@ -24,6 +24,11 @@
       "name": "BIT",
       "email": "bit@gmail.com",
       "id": 92859859
+    },
+    {
+      "name": "Vega",
+      "email": "vega@vega.com",
+      "id": 92859860
     }
   ],
   "candidates": [
@@ -129,6 +134,13 @@
       "email": "stefan@gmail.com",
       "education": "BIT",
       "id": 99087457
+    },
+    {
+      "name": "Miodrag Ivankov",
+      "birthday": "1995-07-11",
+      "email": "miodrag.ivankov@gmail.com",
+      "education": "BIT",
+      "id": 99087458
     }
   ],
   "reports": [
@@ -236,6 +248,17 @@
       "status": "dasdas",
       "note": "dasasddas",
       "id": 61646711
+    },
+    {
+      "candidateId": 99087458,
+      "candidateName": "Miodrag Ivankov",
+      "companyId": "92859860",
+      "companyName": "Vega",
+      "interviewDate": "Wed Dec 11 2024 15:26:32 GMT+0100 (Central European Standard Time)",
+      "phase": "Technical Interview",
+      "status": "Passed",
+      "note": "Miki was excellent!",
+      "id": 61646712
     }
   ],
   "users": [
