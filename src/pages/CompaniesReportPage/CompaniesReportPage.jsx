@@ -37,6 +37,15 @@ const CompaniesReportPage = ({ user }) => {
   const toggleModalOpen = () => {
     setIsModalOpen(!isModalOpen);
   };
+  const handleConfirmation = (companyId, event) => {
+    event.stopPropagation();
+    const userResponse = window.confirm(
+      "Are you sure you want to delete this company?"
+    );
+    if (userResponse) {
+      delReport(companyId);
+    }
+  };
   function delReport(id) {
     console.log(id);
     fetch(`http://localhost:3333/api/reports/${id}`, {
@@ -106,8 +115,7 @@ const CompaniesReportPage = ({ user }) => {
                   <i
                     className="fa"
                     onClick={(e) => {
-                      delReport(report.id);
-                      e.stopPropagation();
+                      handleConfirmation(report.id, e);
                     }}
                   >
                     &#xf014;
