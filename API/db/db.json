@@ -122,20 +122,6 @@
       "email": "ivan.ivanovic@hotmail.com",
       "education": "Belgrade Institute of Technology",
       "avatar": ""
-    },
-    {
-      "name": "dsada",
-      "birthday": "2024-12-19",
-      "email": "dad@das.hgjf",
-      "education": "dsadas",
-      "id": 99087457
-    },
-    {
-      "name": "dasdas",
-      "birthday": "2024-12-24",
-      "email": "dasdS@dsa.dsd",
-      "education": "dasdasd",
-      "id": 99087458
     }
   ],
   "reports": [
@@ -232,6 +218,28 @@
       "candidateName": "Lazar Lazic",
       "interviewDate": "Mon Dec 09 2024 15:27:28 GMT+0100 (Central European Standard Time)",
       "id": 61646709
+    },
+    {
+      "candidateId": 88648435,
+      "candidateName": "Dragomir Despic",
+      "companyId": "34149463",
+      "companyName": "Google",
+      "interviewDate": "Wed Dec 11 2024 12:29:42 GMT+0100 (Central European Standard Time)",
+      "phase": "dasdasdad",
+      "status": "sdadasddasd",
+      "note": "dasdasd",
+      "id": 61646710
+    },
+    {
+      "candidateId": 88648435,
+      "candidateName": "Dragomir Despic",
+      "companyId": "34149463",
+      "companyName": "Google",
+      "interviewDate": "Wed Dec 11 2024 12:30:43 GMT+0100 (Central European Standard Time)",
+      "phase": "dasd",
+      "status": "dasasd",
+      "note": "dasdas",
+      "id": 61646711
     }
   ],
   "users": [

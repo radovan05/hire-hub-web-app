@@ -24,7 +24,7 @@ const CompaniesReportPage = ({ user }) => {
         setReports(data);
         setReportCopy(data);
       });
-  }, [id, refresh]);
+  }, [id, refresh, createNewRep]);
 
   useEffect(() => {
     fetch(`http://localhost:3333/api/companies/${id}`)

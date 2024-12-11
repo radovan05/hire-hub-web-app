@@ -109,7 +109,7 @@ const AllCompaniesPage = ({ user, setUser }) => {
                       deleteCompanyById(company.id);
                     }}
                   >
-                    <i class="fa">&#xf014;</i>
+                    <i className="fa">&#xf014;</i>
                   </button>
                 ) : null}
               </div>
