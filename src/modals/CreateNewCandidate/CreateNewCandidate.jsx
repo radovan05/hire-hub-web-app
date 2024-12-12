@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./CreateNewCandidate.css";
 
-const CreateNewReport = ({ closeModal, token,setLogin }) => {
+const CreateNewReport = ({ closeModal, token, setLogin }) => {
   let name = "";
   let email = "";
   let bDay = "";
