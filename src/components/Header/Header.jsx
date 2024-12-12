@@ -9,6 +9,7 @@ const Header = ({ user, setUser,login ,setLogin }) => {
   let classSelectedHome;
   let classSelectedCompanies;
   if(login===false){
+    alert("Ur session is expired pls Login again.")
     setUser(undefined);
     localStorage.removeItem("user");
     
