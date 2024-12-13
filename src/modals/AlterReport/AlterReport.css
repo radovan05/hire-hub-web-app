@@ -1,25 +1,54 @@
 .alter-body {
-    z-index: 100;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-  .alter-main-div {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 45%;
-    aspect-ratio: 1/0.70;
-    background-color: rgb(179, 151, 122);
-    /* border: 4px dotted azure; */
-    border-radius: 35px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: center;
-    gap: 30px;
-  }
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.alter-main-div {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  aspect-ratio: 1/0.7;
+  background-color: rgb(179, 151, 122);
+  /* border: 4px dotted azure; */
+  border-radius: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+.report-data-right {
+  width: 100%;
+}
+.report-data-right > button {
+  background-color: rgb(224, 123, 57, 0.9);
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 25px;
+  color: white;
+  font-size: 20px;
+  width: 25%;
+  font-size: 14px;
+  margin-left: 135px;
+}
+
+.report-data-right > p > input {
+  border-radius: 25px;
+  width: 73%;
+  padding: 5px;
+  color: rgb(94, 81, 68);
+}
+.report-data-right > p > textarea {
+  border-radius: 25px;
+  padding: 10px;
+}
+.alter-note {
+  margin-left: 8px;
+}
