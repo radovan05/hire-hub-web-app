@@ -6,6 +6,7 @@ import { useParams } from "react-router";
 import ShowReport from "../../modals/ShowReport/ShowReport";
 import Search from "../../components/Search/Search";
 import CreateNewReport from "../../modals/CreateNewReport/CreateNewReport";
+import AlterReport from "../../modals/AlterReport/AlterReport";
 
 const CompaniesReportPage = ({ user, setLogin }) => {
   const [reports, setReports] = useState([]);
@@ -16,6 +17,7 @@ const CompaniesReportPage = ({ user, setLogin }) => {
   const [reportCopy, setReportCopy] = useState([]);
   const [createNewRep, setCreateNewRep] = useState(false);
   const [refresh, setRefresh] = useState(false);
+  const [openAlterModal, setOpenAlterModal] = useState(false);
   const REPORTS_URL = `http://localhost:3333/api/reports?companyId=${id}`;
   const navigate = useNavigate();
 
@@ -26,7 +28,7 @@ const CompaniesReportPage = ({ user, setLogin }) => {
         setReports(data);
         setReportCopy(data);
       });
-  }, [id, refresh, createNewRep]);
+  }, [id, refresh, createNewRep,openAlterModal]);
 
   useEffect(() => {
     fetch(`http://localhost:3333/api/companies/${id}`)
@@ -55,7 +57,6 @@ const CompaniesReportPage = ({ user, setLogin }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-       
         if (data === "jwt expired") {
           setLogin(false);
         }
@@ -72,6 +73,14 @@ const CompaniesReportPage = ({ user, setLogin }) => {
         searchBy={"candidateName"}
         notFilteredData={reportCopy}
       />
+      {openAlterModal ? (
+        <AlterReport
+          closeModal={setOpenAlterModal}
+          rep={openAlterModal}
+          token={user.accessToken}
+          setLogin={setLogin}
+        />
+      ) : null}
       <div className="companiesReport-wrapper">
         <p
           className="company-reports-go-back"
@@ -97,6 +106,7 @@ const CompaniesReportPage = ({ user, setLogin }) => {
             setLogin={setLogin}
           />
         ) : null}
+
         {reports.length > 0 ? (
           reports.map((report, i) => (
             <div
@@ -116,18 +126,31 @@ const CompaniesReportPage = ({ user, setLogin }) => {
                   {new Date(report.interviewDate).toLocaleString()}
                 </p>
               </div>
-              {user?.user.id === 1 ? (
-                <button className="report-del-btn">
-                  <i
-                    className="fa"
+              <div>
+                {user?.user.id === 1 ? (
+                  <button
+                    className="report-del-btn"
                     onClick={(e) => {
-                      handleConfirmation(report.id, e);
+                      setOpenAlterModal(report);
+                      e.stopPropagation();
                     }}
                   >
-                    &#xf014;
-                  </i>
-                </button>
-              ) : undefined}
+                    <p>Edit</p>
+                  </button>
+                ) : undefined}
+                {user?.user.id === 1 ? (
+                  <button className="report-del-btn">
+                    <i
+                      className="fa"
+                      onClick={(e) => {
+                        handleConfirmation(report.id, e);
+                      }}
+                    >
+                      &#xf014;
+                    </i>
+                  </button>
+                ) : undefined}
+              </div>
             </div>
           ))
         ) : (

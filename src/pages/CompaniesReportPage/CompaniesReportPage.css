@@ -61,16 +61,16 @@
   /* margin: 0 auto; */
   margin-bottom: 30px;
 }
-.companiesReport-container > button {
+.report-del-btn {
   background-color: rgb(224, 123, 57, 0.9);
   cursor: pointer;
   padding: 10px;
   border-radius: 25px;
   color: white;
   font-size: 20px;
-  width: 40px;
+  margin-right: 10px;
 }
-.companiesReport-container > button:hover {
+ .report-del-btn:hover {
   background-color: red;
 }
 .company-reports-go-back {

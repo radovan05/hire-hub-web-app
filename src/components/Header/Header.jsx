@@ -29,7 +29,7 @@ const Header = ({ user, setUser,login ,setLogin }) => {
           onClick={() => {
             navigate("/");
           }}
-        />
+        /> 
         <div className="header-pages">
           {" "}
           <p

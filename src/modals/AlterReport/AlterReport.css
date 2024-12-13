@@ -1,0 +1,25 @@
+.alter-body {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .alter-main-div {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+    aspect-ratio: 1/0.70;
+    background-color: rgb(179, 151, 122);
+    /* border: 4px dotted azure; */
+    border-radius: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    gap: 30px;
+  }

@@ -189,15 +189,15 @@
       "note": "Velit facilis sint pariatur et accusantium. Quia consectetur quo distinctio vel quae voluptas aliquam id. Qui fugit blanditiis consequatur porro qui est."
     },
     {
-      "id": 61646704,
       "candidateId": 6496807,
       "candidateName": "Ivan Ivanovic",
       "companyId": 34149463,
       "companyName": "Google",
-      "interviewDate": "Mon May 18 2017 10:44:19 GMT+0100 (CET)",
+      "interviewDate": "Fri Dec 13 2024 12:01:22 GMT+0100 (Central European Standard Time)",
       "phase": "cv",
-      "status": "passed",
-      "note": "Velit facilis sint pariatur et accusantium. Quia consectetur quo distinctio vel quae voluptas aliquam id. Qui fugit blanditiis consequatur porro qui est."
+      "status": "not passed",
+      "note": "Velit facilis sint pariatur et accusantium. Quia consectetur quo distinctio vel quae voluptas aliquam id. Qui fugit blanditiis consequatur porro qui est.",
+      "id": 61646704
     },
     {
       "id": 61646706,
