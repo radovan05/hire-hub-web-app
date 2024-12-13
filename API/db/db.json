@@ -141,6 +141,13 @@
       "email": "miodrag.ivankov@gmail.com",
       "education": "BIT",
       "id": 99087458
+    },
+    {
+      "name": "Martin Potkonjak",
+      "birthday": "1996-06-13",
+      "email": "martin@mar.ocom",
+      "education": "BIT",
+      "id": 99087459
     }
   ],
   "reports": [
