@@ -1,0 +1,48 @@
+
+.error-container {
+    min-height: calc(100vh - 200px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-text {
+    width: 100%;
+    font-size: 250px;
+    font-weight: bold;
+    animation: glitch 1.5s infinite linear;
+}
+
+.message {
+    font-size: 50px;
+    color: #ccc;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0, 0);
+        clip-path: inset(0 0 0 0);
+    }
+    10% {
+        transform: translate(-10px, 0);
+        clip-path: inset(0 0 0 10px);
+    }
+    20% {
+        transform: translate(10px, 0);
+        clip-path: inset(0 0 0 10px);
+    }
+    30% {
+        transform: translate(-5px, 0);
+        clip-path: inset(0 0 0 5px);
+    }
+    50% {
+        transform: translate(0, 0);
+        clip-path: inset(0 0 0 0);
+    }
+    100% {
+        transform: translate(0, 0);
+        clip-path: inset(0 0 0 0);
+    }
+}

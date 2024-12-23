@@ -1,6 +1,7 @@
 import React from "react";
 import "./HomePage.css";
 import { Navigate, useNavigate } from "react-router";
+import IMG_URL from "../../resources/pictures/logo.png"
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -8,7 +9,7 @@ const HomePage = () => {
     <div className="homepage-main-div">
       <div className="info-right">
         <h1>
-          <img src={require("../../resources/pictures/logo.png")} /> HireHub
+          <img src={IMG_URL} /> HireHub
         </h1>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur

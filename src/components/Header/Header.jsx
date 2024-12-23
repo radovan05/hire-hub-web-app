@@ -68,6 +68,7 @@ const Header = ({ user, setUser,login ,setLogin }) => {
                   setUser(undefined);
                   localStorage.removeItem("user");
                   setLog(false);
+                  navigate('/')
                 }}
               >
                 Sign out

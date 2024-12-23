@@ -6,7 +6,7 @@ import Footer from "./components/Footer/Footer"
 import LogIn from "./modals/LogIn/LogIn.jsx"
 import { Route,Routes } from "react-router"
 import { useState } from "react"
-
+import NotFound from "./pages/NotFound/NotFound.jsx"
 function App() {
   const [user, setUser] = useState(undefined);
   const [login, setLogin] = useState(false);
@@ -26,7 +26,7 @@ function App() {
     {user?null: <LogIn setUser={setUser} />}
     <Routes>
       <Route path="/" element={<HomePage/>}/>
-
+      <Route path='*' element={<NotFound/>} />
       <Route path="/reports/:id" element={<CompaniesReportPage user={user}  setLogin={setLogin}/> }/>
       <Route path="/companies" element={<AllCompaniesPage user={user} setUser={setUser}  setLogin={setLogin}/>}/>
 
